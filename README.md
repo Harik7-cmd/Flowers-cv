@@ -393,6 +393,24 @@ flowers-cv/
 ├── requirements.txt
 └── README.md
 ```
+---
+
+## 📦 Model Weights
+
+Model weights are hosted on Google Drive due to GitHub's file size limits:
+
+**🔗 [Download Model Weights](https://drive.google.com/drive/folders/1P2ELcm02uTJYBG6Pq10I4HA29FP8IBeb?usp=sharing)**
+
+| File | Model | Accuracy |
+|------|-------|----------|
+| `vit_2stage_best.pt` | ViT-Small (2-stage) | 98.75% (98.96% with TTA) |
+| `vit_comparison.pt` | ViT-Small (baseline) | 97.54% |
+| `efficientnet_comparison.pt` | EfficientNet-B2 | 86.24% |
+| `resnet50_comparison.pt` | ResNet-50 | 58.12% |
+
+**Setup:** Download and place in `artifacts/models/` folder.
+
+---
 
 ---
 

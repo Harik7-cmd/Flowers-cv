@@ -1,0 +1,27 @@
+{
+  "dataset": {
+    "total_images": 8189,
+    "classes": 102,
+    "train": 1020,
+    "val": 1020,
+    "test": 6149,
+    "images_per_class_train": 10
+  },
+  "challenges": [
+    "Small training set (10 images/class)",
+    "High inter-class similarity",
+    "Variable backgrounds",
+    "Scale variation"
+  ],
+  "strategy": [
+    "Transfer learning (pretrained on ImageNet)",
+    "Strong augmentation",
+    "Compare multiple architectures",
+    "No class weighting needed"
+  ],
+  "models_to_compare": [
+    "ResNet-50",
+    "EfficientNet-B2",
+    "ViT-Small"
+  ]
+}

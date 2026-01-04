@@ -1,0 +1,31 @@
+{
+  "models": {
+    "resnet50": {
+      "val_acc": 60.19607843137255,
+      "test_acc": 58.12327207676045,
+      "train_time_min": 1.4164479653040567,
+      "epochs": 15
+    },
+    "efficientnet": {
+      "val_acc": 88.82352941176471,
+      "test_acc": 86.24166531143275,
+      "train_time_min": 1.1162129441897075,
+      "epochs": 15
+    },
+    "vit": {
+      "val_acc": 98.03921568627452,
+      "test_acc": 97.54431614896731,
+      "train_time_min": 1.1260356227556865,
+      "epochs": 15
+    }
+  },
+  "winner": "vit",
+  "training_config": {
+    "epochs": 15,
+    "lr": 0.0001,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealing",
+    "batch_size": 32,
+    "strategy": "full_finetune"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "model": {
+    "architecture": "vit_small_patch16_224.augreg_in21k_ft_in1k",
+    "training_strategy": "2-stage (freeze backbone \u2192 full fine-tune)",
+    "parameters_millions": 21.704934,
+    "model_size_mb": 82.84213447570801,
+    "inference_time_ms": 1.5407875180244446
+  },
+  "performance": {
+    "test_accuracy": 98.74776386404294,
+    "precision_macro": 0.9852356280828226,
+    "recall_macro": 0.9874140195567467,
+    "f1_macro": 0.9859717678889077,
+    "precision_weighted": 0.9880359653921942,
+    "recall_weighted": 0.9874776386404294,
+    "f1_weighted": 0.9874727063509626,
+    "roc_auc_micro": 0.9995546862871717,
+    "roc_auc_macro": 0.9994675854269264
+  },
+  "error_analysis": {
+    "total_errors": 77,
+    "error_rate": 0.012522361359570662,
+    "high_confidence_errors": 16,
+    "common_confusions": [
+      {
+        "true": "camellia",
+        "pred": "mallow",
+        "count": 9
+      },
+      {
+        "true": "sword lily",
+        "pred": "hippeastrum",
+        "count": 5
+      },
+      {
+        "true": "mexican petunia",
+        "pred": "clematis",
+        "count": 3
+      },
+      {
+        "true": "garden phlox",
+        "pred": "sweet william",
+        "count": 2
+      },
+      {
+        "true": "sword lily",
+        "pred": "daffodil",
+        "count": 2
+      },
+      {
+        "true": "sword lily",
+        "pred": "bolero deep blue",
+        "count": 2
+      },
+      {
+        "true": "sword lily",
+        "pred": "bearded iris",
+        "count": 2
+      },
+      {
+        "true": "petunia",
+        "pred": "mexican petunia",
+        "count": 2
+      },
+      {
+        "true": "lotus",
+        "pred": "water lily",
+        "count": 2
+      },
+      {
+        "true": "canna lily",
+        "pred": "sword lily",
+        "count": 2
+      }
+    ]
+  },
+  "explainability": {
+    "method": "ViT Self-Attention Visualization",
+    "finding": "Middle layers focus on flower parts; late layers create abstract representations",
+    "concerns": "Some attention on leaves/context, but botanically valid"
+  }
+}

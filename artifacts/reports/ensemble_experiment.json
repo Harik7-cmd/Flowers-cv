@@ -1,0 +1,26 @@
+{
+  "individual_models": {
+    "resnet50": 58.12327265739441,
+    "efficientnet": 86.24166250228882,
+    "vit_full_finetune": 97.5443184375763,
+    "vit_2stage": 98.74776601791382
+  },
+  "ensemble_strategies": {
+    "simple_average_3": 97.5443184375763,
+    "weighted_average_3": 97.56057858467102,
+    "top2_simple": 97.56057858467102,
+    "top2_weighted": 97.56057858467102,
+    "with_2stage_vit": 98.84533882141113
+  },
+  "conclusion": {
+    "winner": "vit_2stage",
+    "best_single_model_acc": 98.74776601791382,
+    "best_ensemble_acc": 97.56057858467102,
+    "difference": 1.1871874332427979
+  },
+  "analysis": {
+    "finding": "Single optimized model beats ensemble",
+    "reason": "ViT dominates; weak models add noise not signal",
+    "recommendation": "Use 2-stage ViT for production"
+  }
+}

@@ -1,0 +1,35 @@
+# Model Configuration
+model:
+  name: "tf_efficientnet_b2.ns_jft_in1k"
+  num_classes: 102
+  pretrained: true
+
+# Data Configuration
+data:
+  img_size: 224
+  batch_size: 32
+  num_workers: 4
+
+# Training Configuration
+training:
+  epochs: 30
+  patience: 7
+  
+  # Learning rates
+  lr_head: 1.0e-3
+  lr_backbone: 1.0e-4
+  
+  # Regularization
+  weight_decay: 1.0e-4
+  label_smoothing: 0.1
+  
+  # Mixed precision
+  amp: true
+
+# Paths
+paths:
+  data_root: "./data"
+  checkpoint: "./artifacts/best_model.pt"
+
+# Reproducibility
+seed: 42
